@@ -23,9 +23,8 @@ public class GalaxyFrame extends JFrame{
                 getContentPane().setLayout(new BorderLayout());
                 //galaxyPanel = new GalaxyMapPanel(0,0);
                 buttonPanel = new ButtonPanel(21);
-                getContentPane().add(buttonPanel,"Center");
-                // galaxyPanel.createScreen();                                                                   //landPanel.setVisible(false);
-		//getContentPane().add(skyPanel,"Center");
+               // getContentPane().add(galaxyPanel,"Center");
+                 getContentPane().add(buttonPanel,"Center");
                 setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize (820, 800);
 		setVisible(true);

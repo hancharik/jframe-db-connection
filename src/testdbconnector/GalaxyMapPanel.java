@@ -23,6 +23,7 @@ public class GalaxyMapPanel extends JPanel{
     public JPanel galaxyMapButtonPanel;
     public int x;
     public int y;
+    public int arraySize = 21;
    // public JPanel bottomButtonPanel;
    // public JButton backButton;
     
@@ -38,12 +39,12 @@ public class GalaxyMapPanel extends JPanel{
   
    public void initializeComponents(){
        
-        galaxyMapButtonArray = new Obutton[11][11];
+        galaxyMapButtonArray = new Obutton[arraySize][arraySize];
         
         
         
         galaxyMapButtonPanel = new JPanel(); //new BoxLayout(mainPanel, BoxLayout.Y_AXIS) from oracle site http://docs.oracle.com/javase/tutorial/displayCode.html?code=http://docs.oracle.com/javase/tutorial/uiswing/examples/layout/BoxLayoutDemoProject/src/layout/BoxLayoutDemo.java
-        galaxyMapButtonPanel.setLayout(new GridLayout(11,11));
+        galaxyMapButtonPanel.setLayout(new GridLayout(arraySize,arraySize));
         //galaxyMapButtonPanel.setSize(400, 400);
         
         //bottomButtonPanel = new JPanel();
@@ -52,8 +53,8 @@ public class GalaxyMapPanel extends JPanel{
         //backButton = new JButton("Back");
         
         //int arrayNumber = 1;
-        for(int i = x; i < 11; i++){
-                for(int j = y; j < 11; j++){
+        for(int i = x; i < arraySize; i++){
+                for(int j = y; j < arraySize; j++){
                    //galaxyMapButton = new Obutton("" + arrayNumber + "", ShipsInSpace.gtest.galaxyMap[i][j].solarSystemNameList, arrayNumber); 
                   //galaxyMapButton = new Obutton(ShipsInSpace.gtest.galaxyMap[i][j].icon, ShipsInSpace.gtest.galaxyMap[i][j].solarSystemNameList, arrayNumber); 
                   //galaxyMapButton = new Obutton(i,j,ShipsInSpace.gtest.galaxyMap[i][j].icon);

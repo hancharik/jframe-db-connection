@@ -5,6 +5,7 @@
  */
 package testdbconnector;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.sql.Connection;
@@ -31,7 +32,7 @@ public class ButtonPanel extends JPanel{
     super();
      stars = new ArrayList();
     coordinates = new ArrayList();
-             
+     setLayout(new BorderLayout());        
     JPanel p1 = new JPanel(); 
     int halved = (rows - 1)/2;
     p1.setLayout(new GridLayout(rows ,rows));
@@ -69,7 +70,7 @@ public class ButtonPanel extends JPanel{
                         int G = (int)(Math.random( )*256);
                         int B= (int)(Math.random( )*256);
                         Color randomButtonColor = new Color(R, G, B);
-                        //b.setText( coordinates.get(i) );  // this is informativ if you are interested in a particular color, shos the values
+                        b.setText( coordinates.get(i) );  // this is informativ if you are interested in a particular color, shos the values
                        // b.setName(contents.get(i));
                        //    b.setName(shortenString(rootFolder)+ "\\" + tempFolder + contents.get(i));
                        if(stars.get(i)){
